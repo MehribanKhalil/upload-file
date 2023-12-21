@@ -1,18 +1,13 @@
-// import mongoose from "mongoose";
-// const { Schema } = mongoose;
+import mongoose from "mongoose";
+const { Schema } = mongoose;
 
-// const userSchema = new Schema(
-//   {
-//     email: { type: String, required: true },
-//     password: { type: String, required: true },
-//   },
-//   { timestamps: true }
-// );
+const userSchema = new Schema(
+  {
+    userName: { type: String, requierd: true },
+    password: { type: String, required: true },
+    role: { type: String, required: true },
+  },
+  { timestamps: true }
+);
 
-// userSchema.pre("save", async(next)=>{
-//   if (this.isMbdified('')) {
-    
-//   }
-// } )
-
-// export default mongoose.model("Users", userSchema);
+export default mongoose.model("Users", userSchema);

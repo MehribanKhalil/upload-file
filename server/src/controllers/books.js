@@ -47,6 +47,6 @@ export const updateBook = async (req, res) => {
     const book = await Books.findByIdAndUpdate(req.params.id, req.body);
     res.send(book);
   } catch (error) {
-    res.status(500).json({ message: error});
+    res.status(500).json({ message: error });
   }
 };
